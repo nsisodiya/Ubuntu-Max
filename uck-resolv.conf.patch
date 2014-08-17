@@ -1,0 +1,13 @@
+--- remaster-live-cd.sh.old	2012-11-23 11:29:56.155695984 +0530
++++ remaster-live-cd.sh.new	2012-11-23 11:30:39.225695990 +0530
+@@ -354,10 +354,6 @@
+ {
+ 	mount_pseudofilesystems
+ 
+-	echo "Copying resolv.conf..."
+-	cp -f /etc/resolv.conf "$REMASTER_DIR/etc/resolv.conf" ||
+-		failure "Failed to copy resolv.conf, error=$?"
+-		
+ 	echo "Copying fstab/mtab..."
+ 	if [ -f "$REMASTER_DIR/etc/fstab" ] ; then
+ 		mv "$REMASTER_DIR/etc/fstab" "$REMASTER_DIR/etc/fstab.uck" ||
